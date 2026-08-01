@@ -33,6 +33,7 @@ const tracks = [
   { id: 6, title: 'Spite', genre: 'Progressive House / Hyperpop', tone: 'ember', src: '/audio/spite.m4a', art: '/images/editorial-motion.jpg' },
   { id: 7, title: 'Beautiful Thoughts', genre: 'Progressive House / Hyperpop', tone: 'sand', src: '/audio/beautiful-thoughts.m4a', art: '/images/editorial-motion.jpg' },
   { id: 8, title: 'Not Much to Say', genre: 'Progressive House / Hyperpop', tone: 'coral', src: '/audio/not-much-to-say.m4a', art: '/images/editorial-motion.jpg' },
+  { id: 9, title: 'Obsessed', genre: 'Progressive House / Hyperpop', tone: 'orange', src: '/audio/obsessed.m4a', art: '/images/editorial-motion.jpg' },
 ]
 
 const capabilities = [
@@ -271,7 +272,7 @@ function App() {
               <p className="section-index">01 / Selected sound</p>
               <h2>Featured music</h2>
             </div>
-            <p>Eight original progressive house and hyperpop excerpts balancing club energy, cinematic tension, and emotional songwriting.</p>
+            <p>Nine original progressive house and hyperpop excerpts balancing club energy, cinematic tension, and emotional songwriting.</p>
           </div>
           <div className="track-grid">
             {tracks.map((track) => (
