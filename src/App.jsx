@@ -24,6 +24,8 @@ const PROFILE = {
   instagram: 'https://instagram.com/treymayofficial',
 }
 
+const EMAIL_LINK = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(PROFILE.email)}&su=${encodeURIComponent('Portfolio inquiry for Trey May')}`
+
 const tracks = [
   { id: 1, title: 'Extasy (Sempero)', genre: 'Progressive House / Hyperpop', tone: 'orange', src: '/audio/extasy.m4a', art: '/images/extasy-cover.jpg' },
   { id: 2, title: 'It’s Alive', genre: 'Progressive House / Hyperpop', tone: 'red', src: '/audio/its-alive.m4a', art: '/images/editorial-motion.jpg' },
@@ -184,7 +186,7 @@ function App() {
       setEmailCopied(true)
       window.setTimeout(() => setEmailCopied(false), 2200)
     } catch {
-      window.location.href = `mailto:${PROFILE.email}`
+      window.open(EMAIL_LINK, '_blank', 'noopener,noreferrer')
     }
   }
 
@@ -207,7 +209,7 @@ function App() {
           <a href="#brand-research" onClick={closeMenu}>Research</a>
           <a href="#about" onClick={closeMenu}>About</a>
         </nav>
-        <a className="header-contact" href={`mailto:${PROFILE.email}`}>Let’s work <ArrowUpRight size={15} /></a>
+        <a className="header-contact" href={EMAIL_LINK} target="_blank" rel="noreferrer">Let’s work <ArrowUpRight size={15} /></a>
         <button
           className="menu-toggle"
           type="button"
@@ -235,7 +237,7 @@ function App() {
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#music">Hear the work <ArrowDown size={16} /></a>
-              <a className="text-link email-link" href={`mailto:${PROFILE.email}`}>
+              <a className="text-link email-link" href={EMAIL_LINK} target="_blank" rel="noreferrer">
                 Email me <ArrowUpRight size={15} />
               </a>
               <a className="text-link" href="/documents/trey-may-music-resume.pdf" download>
@@ -478,13 +480,13 @@ function App() {
           <p className="section-index">06 / Start a conversation</p>
           <div className="contact-main">
             <h2>Let’s make<br />something <em>resonate.</em></h2>
-            <a className="contact-circle" href={`mailto:${PROFILE.email}`} aria-label="Send an email">
+            <a className="contact-circle" href={EMAIL_LINK} target="_blank" rel="noreferrer" aria-label="Compose an email to Trey May">
               <ArrowUpRight size={28} />
             </a>
           </div>
           <div className="contact-details">
             <div className="email-actions">
-              <a href={`mailto:${PROFILE.email}`}><Mail size={16} /> {PROFILE.email}</a>
+              <a href={EMAIL_LINK} target="_blank" rel="noreferrer"><Mail size={16} /> {PROFILE.email}</a>
               <button type="button" onClick={copyEmail} aria-live="polite">
                 {emailCopied ? <Check size={14} /> : <Copy size={14} />}
                 {emailCopied ? 'Copied' : 'Copy email'}
@@ -500,7 +502,7 @@ function App() {
       <footer>
         <a className="monogram" href="#top">T<span>/</span>01</a>
         <p>Music for artists, brands, and immersive experiences.</p>
-        <a href={`mailto:${PROFILE.email}`}>Email me <ArrowUpRight size={14} /></a>
+        <a href={EMAIL_LINK} target="_blank" rel="noreferrer">Email me <ArrowUpRight size={14} /></a>
       </footer>
     </div>
   )
