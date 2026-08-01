@@ -3,6 +3,7 @@ import {
   ArrowDown,
   ArrowUpRight,
   AudioWaveform,
+  BriefcaseBusiness,
   Camera,
   Check,
   Copy,
@@ -22,6 +23,7 @@ const PROFILE = {
   email: 'treymayofficial@gmail.com',
   location: 'Savannah · Atlanta · Remote',
   instagram: 'https://instagram.com/treymayofficial',
+  linkedin: 'https://www.linkedin.com/in/david-mayiii/',
 }
 
 const EMAIL_LINK = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(PROFILE.email)}&su=${encodeURIComponent('Portfolio inquiry for Trey May')}`
@@ -494,6 +496,7 @@ function App() {
             </div>
             <div className="socials">
               <a href={PROFILE.instagram} target="_blank" rel="noreferrer"><Camera size={16} /> Instagram</a>
+              <a href={PROFILE.linkedin} target="_blank" rel="noreferrer"><BriefcaseBusiness size={16} /> LinkedIn</a>
             </div>
           </div>
         </section>
